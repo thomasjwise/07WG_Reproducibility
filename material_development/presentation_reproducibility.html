@@ -434,15 +434,31 @@ Thomas Wise
 </section>
 <section id="why-is-reproducibility-important" class="slide level2">
 <h2>Why is Reproducibility Important</h2>
-</section>
-<section id="why-is-reproducibility-sometimes-hard-to-achieve" class="slide level2">
-<h2>Why is Reproducibility sometimes hard to achieve</h2>
+<ul>
+<li>When conducting statistical analysis, the only variable is the input.</li>
+<li>We expect that output to change, when the input changes.</li>
+<li>But we want our statistical analysis to be repeatable, so that there is a clear audit trail.</li>
+</ul>
 </section>
 <section id="how-to-achieve-reproducibility" class="slide level2">
 <h2>How to achieve Reproducibility</h2>
+<ul>
+<li>At their heart, computers do not like randomness, meaning we can exploit that to create Reproducible behaviour despite randomness.</li>
+</ul>
+<p>For example:</p>
+<ul>
+<li><p>If you run the command <code>runif(n = 1)</code>, you will get a random number between 0 and 1.</p></li>
+<li><p>But if you run <code>set.seed(1)</code> before running <code>runif(n=1)</code> you will get the same result each time</p></li>
+<li><p>This number is 0.2655087</p></li>
+</ul>
 </section>
-<section id="how-to-embedd-reproducibility-into-your-code" class="slide level2">
-<h2>How to embedd Reproducibility into your code</h2>
+<section id="how-to-embed-reproducibility-into-your-code" class="slide level2">
+<h2>How to embed Reproducibility into your code</h2>
+<ul>
+<li><p>The most effective way to embed reproducibility into your code is to run <code>set.seed()</code> at the beginning of your script, before running that pipeline from end-to-end.</p></li>
+<li><p>This means if someone was to run your code, with the exact same data, all cases of randomness will be defined in the same way.</p></li>
+<li><p>We will be able to witness this in action shortly.</p></li>
+</ul>
 </section></section>
 <section>
 <section id="section-2-introduction-to-machine-learning" class="title-slide slide level1 center">

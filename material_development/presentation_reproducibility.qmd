@@ -11,34 +11,52 @@ editor: visual
 
 ## Session Objectives
 
-- Understand the importance of Reproducibility within Statistical Analysis 
-- Understand the importance of Reproducibility within Machine Learning 
-- Be able to apply measures of Reproducibility within Coding 
+-   Understand the importance of Reproducibility within Statistical Analysis
+-   Understand the importance of Reproducibility within Machine Learning
+-   Be able to apply measures of Reproducibility within Coding
 
-## Today's Plan 
+## Today's Plan
 
-- Section 1: The Importance of Reproducibility 
-- Section 2: Introduction to Machine Learning 
-- Exercise 1: Applying Reproducibility, through Machine Learning Preparation 
-- Break 
-- Section 3: Developing Machine Learning Models
-- Exercise 2: Applying Machine Learning Models
+-   Section 1: The Importance of Reproducibility
+-   Section 2: Introduction to Machine Learning
+-   Exercise 1: Applying Reproducibility, through Machine Learning Preparation
+-   Break
+-   Section 3: Developing Machine Learning Models
+-   Exercise 2: Applying Machine Learning Models
 
 # But first - Setup!
 
-Similar to last week, please take a moment to ensure that the tidy models package(s) are loaded in correctly! 
+Similar to last week, please take a moment to ensure that the tidy models package(s) are loaded in correctly!
 
-# Section 1: The Importance of Reproducibility 
+# Section 1: The Importance of Reproducibility
 
-## Why is Reproducibility Important 
+## Why is Reproducibility Important
 
-## Why is Reproducibility sometimes hard to achieve 
+-   When conducting statistical analysis, the only variable is the input.
+-   We expect that output to change, when the input changes.
+-   But we want our statistical analysis to be repeatable, so that there is a clear audit trail.
 
-## How to achieve Reproducibility 
+## How to achieve Reproducibility
 
-## How to embedd Reproducibility into your code 
+-   At their heart, computers do not like randomness, meaning we can exploit that to create Reproducible behaviour despite randomness.
 
-# Section 2: Introduction to Machine Learning 
+For example:
+
+-   If you run the command `runif(n = 1)`, you will get a random number between 0 and 1.
+
+-   But if you run `set.seed(1)` before running `runif(n=1)` you will get the same result each time
+
+-   This number is 0.2655087
+
+## How to embed Reproducibility into your code
+
+-   The most effective way to embed reproducibility into your code is to run `set.seed()` at the beginning of your script, before running that pipeline from end-to-end.
+
+-   This means if someone was to run your code, with the exact same data, all cases of randomness will be defined in the same way.
+
+-   We will be able to witness this in action shortly.
+
+# Section 2: Introduction to Machine Learning
 
 ## Note:
 
@@ -121,9 +139,9 @@ To split for validation you can use:
 
 -   You can control the randomness found, using `set.seed()` function
 
-# Exercise 1: Applying Reproducibility, through Machine Learning Preparation 
+# Exercise 1: Applying Reproducibility, through Machine Learning Preparation
 
-# Break 
+# Break
 
 # Section 3: Developing Machine Learning Models
 
@@ -247,7 +265,7 @@ Please note, the model metrics, will vary depending on the method being used!
 
 ## Next Session:
 
--   Mini Project Preparation 
+-   Mini Project Preparation
 -   23rd June, 12:30-14:00
 
 ## Resources:
